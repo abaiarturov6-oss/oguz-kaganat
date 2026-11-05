@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122a25">
+  <title>Огузский каганат — история и наследие</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c302a;
+      --muted: #65756a;
+      --forest: #17352d;
+      --forest-deep: #10251f;
+      --paper: #f5f1e7;
+      --paper-light: #fbf8f0;
+      --gold: #c99b52;
+      --line: rgba(31, 57, 46, .14);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 12% 12%, rgba(201, 155, 82, .13), transparent 34%),
+        radial-gradient(ellipse at 90% 92%, rgba(31, 78, 60, .12), transparent 34%),
+        #e9e5d9;
+    }
+
+    button { font: inherit; }
+
+    .presentation {
+      display: grid;
+      min-height: 100vh;
+      grid-template-rows: auto 1fr auto;
+      padding: clamp(16px, 3.5vw, 42px) clamp(16px, 5vw, 72px) 20px;
+    }
+
+    .topbar, .bottombar {
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100%, 1160px);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--forest);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 1px solid rgba(201, 155, 82, .72);
+      border-radius: 50%;
+      color: #966e32;
+      font-family: Georgia, serif;
+      font-size: 17px;
+    }
+
+    .top-note {
+      color: #758076;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .stage {
+      display: grid;
+      min-height: 0;
+      place-items: center;
+      padding: 22px 0;
+    }
+
+    .slide {
+      position: relative;
+      display: none;
+      width: min(100%, 1160px);
+      min-height: min(68vh, 640px);
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 76px);
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 5px;
+      background: var(--paper-light);
+      box-shadow: 0 28px 80px rgba(34, 43, 34, .15), 0 3px 12px rgba(34, 43, 34, .06);
+      animation: appear .35s ease both;
+    }
+
+    .slide.active { display: flex; flex-direction: column; }
+
+    .slide::after {
+      position: absolute;
+      right: -120px;
+      bottom: -180px;
+      width: 440px;
+      height: 440px;
+      border: 1px solid rgba(201, 155, 82, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 34px rgba(201,155,82,.035), 0 0 0 72px rgba(201,155,82,.025);
+      content: "";
+      pointer-events: none;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 19px;
+      color: #9b7339;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 27px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      max-width: 850px;
+      margin-bottom: 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      max-width: 750px;
+      color: #fffaf0;
+      font-size: clamp(42px, 7.3vw, 88px);
+      line-height: .99;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.07;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .lead {
+      max-width: 670px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(16px, 1.7vw, 20px);
+      line-height: 1.65;
+    }
+
+    .cover {
+      justify-content: center;
+      border: 0;
+      background:
+        linear-gradient(110deg, rgba(16, 37, 31, .99) 0%, rgba(23, 53, 45, .96) 58%, rgba(24, 58, 48, .82) 100%),
+        var(--forest);
+      color: #fffaf0;
+    }
+
+    .cover::before {
+      position: absolute;
+      top: 50%;
+      right: -4%;
+      width: min(53vw, 600px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(218, 180, 111, .36);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(218,180,111,.035), 0 0 0 74px rgba(218,180,111,.03), 0 0 0 122px rgba(218,180,111,.025);
+      content: "";
+      transform: translateY(-50%);
+    }
+
+    .cover::after {
+      right: 12%;
+      bottom: 12%;
+      border-color: rgba(218, 180, 111, .3);
+    }
+
+    .cover .eyebrow { color: #e2bd7f; }
+    .cover .lead { color: rgba(255,250,240,.72); }
+    .cover-copy { position: relative; z-index: 1; }
+
+    .cover-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 38px;
+    }
+
+    .cover-meta span {
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 30px;
+      color: rgba(255,250,240,.82);
+      font-size: 12px;
+    }
+
+    .section-heading { position: relative; z-index: 1; }
+
+    .grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: auto;
+      padding-top: 32px;
+    }
+
+    .card {
+      min-height: 150px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: rgba(255,255,255,.48);
+    }
+
+    .card p, .detail p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .card-number {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #a47c40;
+      font-family: Georgia, serif;
+      font-size: 14px;
+    }
+
+    .two-col {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: clamp(28px, 6vw, 76px);
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .detail {
+      padding: 0 0 18px 18px;
+      border-left: 2px solid rgba(201,155,82,.65);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail:last-child { border-bottom: 0; }
+
+    .stat-panel {
+      display: grid;
+      min-height: 255px;
+      align-content: center;
+      justify-items: center;
+      padding: 25px;
+      border-radius: 3px;
+      background: var(--forest);
+      color: #fffaf0;
+      text-align: center;
+    }
+
+    .stat-panel strong {
+      color: #e3bd7d;
+      font-family: Georgia, serif;
+      font-size: clamp(53px, 7vw, 82px);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .stat-panel span {
+      max-width: 230px;
+      margin-top: 13px;
+      color: rgba(255,250,240,.78);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .photo-figure {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      align-self: stretch;
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: rgba(255,255,255,.62);
+    }
+
+    .photo-figure img {
+      display: block;
+      width: 100%;
+      min-height: 0;
+      flex: 1;
+      object-fit: cover;
+      background: #e9e5d9;
+    }
+
+    .photo-figure figcaption {
+      display: grid;
+      gap: 5px;
+      padding: 11px 13px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .photo-figure figcaption a {
+      color: #80602e;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .photo-credit {
+      position: relative;
+      z-index: 1;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: auto;
+      padding-top: 58px;
+    }
+
+    .milestone {
+      position: relative;
+      padding-top: 20px;
+      border-top: 1px solid rgba(201,155,82,.72);
+    }
+
+    .milestone::before {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border: 2px solid var(--paper-light);
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold);
+      content: "";
+    }
+
+    .milestone strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #966e32;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .milestone p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .quote-slide {
+      justify-content: center;
+      background: #eae5d8;
+    }
+
+    .quote-slide blockquote {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      margin: 8px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(29px, 5vw, 54px);
+      line-height: 1.19;
+      letter-spacing: -.025em;
+    }
+
+    .quote-slide blockquote::before {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      content: "“";
+      font-size: 78px;
+      line-height: .7;
+    }
+
+    .quote-slide .source {
+      position: relative;
+      z-index: 1;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .thanks {
+      justify-content: center;
+      background: var(--forest);
+      color: #fffaf0;
+    }
+
+    .thanks h2 { color: #fffaf0; }
+    .thanks .lead { color: rgba(255,250,240,.72); }
+    .thanks::after { border-color: rgba(218,180,111,.3); }
+
+    .bottombar {
+      gap: 20px;
+      color: #69756d;
+      font-size: 12px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-button {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid rgba(31,57,46,.2);
+      border-radius: 50%;
+      background: rgba(251,248,240,.62);
+      color: var(--forest);
+      cursor: pointer;
+      transition: background .2s, color .2s, transform .2s;
+    }
+
+    .nav-button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      background: var(--forest);
+      color: white;
+    }
+
+    .nav-button:disabled { cursor: default; opacity: .38; }
+    .nav-button:focus-visible { outline: 3px solid rgba(201,155,82,.75); outline-offset: 3px; }
+
+    .slide-counter {
+      min-width: 48px;
+      color: var(--forest);
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+    }
+
+    .progress {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: rgba(31,57,46,.08);
+    }
+
+    .progress span {
+      display: block;
+      width: 10%;
+      height: 100%;
+      background: var(--gold);
+      transition: width .25s ease;
+    }
+
+    .cover .progress span, .thanks .progress span { background: #e2bd7f; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+    }
+
+    @media (max-width: 700px) {
+      body { overflow: auto; }
+      .presentation { min-height: 100svh; padding: 17px 14px 14px; }
+      .top-note { display: none; }
+      .stage { padding: 16px 0; }
+      .slide { min-height: 68svh; padding: 30px 24px; }
+      .grid { grid-template-columns: 1fr; gap: 9px; padding-top: 23px; }
+      .card { min-height: 0; padding: 15px 17px; }
+      .card-number { margin-bottom: 8px; }
+      .card h3 { margin-bottom: 5px; font-size: 19px; }
+      .card p { font-size: 14px; }
+      .two-col { grid-template-columns: 1fr; gap: 20px; }
+      .stat-panel { min-height: 150px; }
+      .photo-figure img { min-height: 180px; max-height: 230px; flex: none; }
+      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; padding-top: 32px; }
+      .milestone { padding-top: 13px; }
+      .bottombar { gap: 8px; }
+      .hint { max-width: 125px; line-height: 1.4; }
+      .cover::before { top: 24%; right: -30%; width: 95vw; }
+      .cover-meta { margin-top: 25px; }
+    }
+
+    @media (max-width: 400px) {
+      .brand { font-size: 10px; }
+      .slide { padding: 27px 19px; }
+      .timeline { grid-template-columns: 1fr; gap: 15px; }
+      .milestone { padding-top: 10px; }
+      .language-switch { margin-left: 0; }
+      .language-button { padding: 0 7px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+
+    :root {
+      color-scheme: dark;
+      --ink: #f0e8d9;
+      --muted: #b6b5a8;
+      --forest: #263d35;
+      --forest-deep: #101713;
+      --paper: #17211c;
+      --paper-light: #1b2822;
+      --gold: #d7784e;
+      --line: rgba(233, 220, 193, .16);
+    }
+
+    body {
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% 120%, rgba(181, 84, 48, .15), transparent 42%),
+        radial-gradient(ellipse at 100% 0%, rgba(99, 124, 92, .1), transparent 34%),
+        #101713;
+    }
+
+    .presentation { padding-top: clamp(18px, 3vw, 36px); }
+
+    .brand {
+      color: #e9dfcc;
+      letter-spacing: .16em;
+    }
+
+    .brand-mark {
+      border-radius: 4px;
+      background: #d7784e;
+      color: #17211c;
+      border-color: #d7784e;
+      font-weight: 700;
+    }
+
+    .top-note {
+      color: #9c9b8e;
+      letter-spacing: .14em;
+    }
+
+    .slide {
+      min-height: min(72vh, 680px);
+      border: 1px solid rgba(232, 216, 185, .13);
+      border-radius: 2px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.025), transparent 42%),
+        repeating-linear-gradient(135deg, transparent 0 42px, rgba(255,255,255,.012) 43px 44px),
+        #1a2520;
+      box-shadow: 0 30px 100px rgba(0,0,0,.32);
+    }
+
+    .slide::after {
+      right: -170px;
+      bottom: -240px;
+      border-color: rgba(215,120,78,.15);
+      box-shadow: 0 0 0 34px rgba(215,120,78,.025), 0 0 0 72px rgba(215,120,78,.02);
+    }
+
+    .eyebrow {
+      color: #e18b63;
+      letter-spacing: .2em;
+    }
+
+    .eyebrow::before { background: #d7784e; }
+
+    h1, h2, h3 { color: #f0e8d9; }
+
+    .lead { color: #b6b5a8; }
+
+    .cover {
+      background:
+        linear-gradient(90deg, rgba(16,23,19,.97), rgba(16,23,19,.66) 66%, rgba(16,23,19,.34)),
+        radial-gradient(ellipse at 82% 84%, rgba(202,104,61,.38), transparent 38%),
+        linear-gradient(165deg, #31483b 0%, #1a2921 47%, #141c18 100%);
+    }
+
+    .cover::before {
+      right: 7%;
+      width: min(43vw, 510px);
+      border-radius: 50%;
+      border: 1px solid rgba(225,139,99,.48);
+      box-shadow: 0 0 0 24px rgba(225,139,99,.04), 0 0 0 60px rgba(225,139,99,.035), 0 0 0 102px rgba(225,139,99,.025);
+    }
+
+    .cover .eyebrow, .thanks .eyebrow { color: #e99a71; }
+    .cover .lead, .thanks .lead { color: rgba(240,232,217,.72); }
+
+    .cover-meta span {
+      border-color: rgba(240,232,217,.23);
+      color: #e9dfcc;
+      background: rgba(16,23,19,.2);
+    }
+
+    .card {
+      border-color: rgba(233,220,193,.14);
+      border-radius: 2px;
+      background: rgba(255,255,255,.035);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(215,120,78,.5);
+      background: rgba(255,255,255,.06);
+    }
+
+    .card-number, .milestone strong { color: #e18b63; }
+
+    .detail { border-left-color: rgba(215,120,78,.8); }
+
+    .stat-panel {
+      border: 1px solid rgba(233,220,193,.12);
+      border-radius: 2px;
+      background: linear-gradient(145deg, #354b3c, #222f27);
+    }
+
+    .stat-panel strong { color: #e99a71; }
+    .stat-panel span { color: rgba(240,232,217,.76); }
+
+    .photo-figure {
+      border-color: rgba(233,220,193,.14);
+      background: #17211c;
+    }
+
+    .photo-figure figcaption a { color: #e99a71; }
+    .photo-figure figcaption { color: #b6b5a8; }
+
+    .milestone { border-top-color: rgba(215,120,78,.75); }
+
+    .milestone::before {
+      border-color: #1a2520;
+      background: #d7784e;
+      box-shadow: 0 0 0 1px #d7784e;
+    }
+
+    .milestone p { color: #b6b5a8; }
+
+    .quote-slide {
+      background:
+        radial-gradient(ellipse at 80% 75%, rgba(181,84,48,.2), transparent 42%),
+        #202b25;
+    }
+
+    .quote-slide blockquote { color: #f0e8d9; }
+    .quote-slide blockquote::before { color: #d7784e; }
+    .quote-slide .source { color: #b6b5a8; }
+
+    .thanks {
+      background:
+        radial-gradient(ellipse at 80% 75%, rgba(181,84,48,.2), transparent 42%),
+        #1a2921;
+    }
+
+    .thanks h2 { color: #f0e8d9; }
+
+    .bottombar { color: #aaa99d; }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      margin-left: auto;
+      padding: 3px;
+      border: 1px solid rgba(233,220,193,.2);
+      border-radius: 3px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .language-button {
+      min-height: 30px;
+      padding: 0 9px;
+      border: 0;
+      border-radius: 2px;
+      background: transparent;
+      color: #aaa99d;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    .language-button[aria-pressed="true"] {
+      background: #d7784e;
+      color: #101713;
+    }
+
+    .language-button:focus-visible {
+      outline: 2px solid #e99a71;
+      outline-offset: 2px;
+    }
+
+    .cover h1, .thanks h2, .stat-panel strong { white-space: pre-line; }
+
+    .nav-button {
+      border-color: rgba(233,220,193,.24);
+      background: rgba(255,255,255,.04);
+      color: #f0e8d9;
+    }
+
+    .nav-button:hover:not(:disabled) {
+      background: #d7784e;
+      color: #101713;
+    }
+
+    .nav-button:focus-visible { outline-color: #e99a71; }
+    .slide-counter { color: #e9dfcc; }
+
+    .progress { background: rgba(255,255,255,.08); }
+    .progress span, .cover .progress span, .thanks .progress span { background: #d7784e; }
+
+    @media (max-width: 700px) {
+      .slide { min-height: 68svh; }
+      .cover::before { right: -30%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="presentation" aria-label="Презентация об Огузском каганате">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">О</span><span class="brand-name">История степных империй</span></div>
+      <div class="top-note">Центральная Азия · IX–XI века</div>
+      <div class="language-switch" role="group" aria-label="Язык презентации">
+        <button class="language-button" type="button" data-language="ru" aria-pressed="true">РУС</button>
+        <button class="language-button" type="button" data-language="ky" aria-pressed="false">КЫР</button>
+      </div>
+    </header>
+
+    <div class="stage" aria-live="polite">
+      <section class="slide cover active" aria-label="Слайд 1">
+        <div class="cover-copy">
+          <p class="eyebrow">История тюркских народов</p>
+          <h1>Огузский<br>каганат</h1>
+          <p class="lead">Кочевые союзы, торговые пути и наследие народа, изменившего историю Евразии.</p>
+          <div class="cover-meta"><span>IX–XI века</span><span>Приаралье и Сырдарья</span></div>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 2">
+        <div class="section-heading">
+          <p class="eyebrow">01 · Земля и время</p>
+          <h2>На перекрёстке степных дорог</h2>
+          <p class="lead">Огузский союз сформировался на пространстве, где встречались кочевая степь, реки и караванные маршруты.</p>
+        </div>
+        <div class="two-col">
+          <div class="detail-list">
+            <article class="detail"><h3>Приаралье</h3><p>Степные пространства к северу и востоку от Аральского моря.</p></article>
+            <article class="detail"><h3>Сырдарья</h3><p>Река связывала кочевые земли с городами и рынками региона.</p></article>
+            <article class="detail"><h3>Янгикент</h3><p>Один из главных политических центров огузов и резиденция ябгу.</p></article>
+          </div>
+          <figure class="photo-figure">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Dzhankent_citadel_%26_tower_2013.JPG" alt="Руины цитадели Янгикента и раскопанная башня" loading="eager">
+          </figure>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 3">
+        <div class="section-heading">
+          <p class="eyebrow">02 · Возникновение</p>
+          <h2>Как сложился огузский союз</h2>
+        </div>
+        <div class="two-col">
+          <p class="lead">Огузы были объединением тюркоязычных племён. Их политический союз складывался постепенно, по мере переселений и соперничества за пастбища и торговые пути.</p>
+          <div class="detail-list">
+            <article class="detail"><h3>Перемещения</h3><p>Тюркские племена двигались на запад и взаимодействовали с населением степей.</p></article>
+            <article class="detail"><h3>Объединение</h3><p>Общие интересы и военные союзы укрепляли власть огузских правителей.</p></article>
+            <article class="detail"><h3>Соседи</h3><p>Хазары, печенеги, кипчаки и государства Средней Азии влияли на политику региона.</p></article>
+          </div>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 4">
+        <div class="section-heading">
+          <p class="eyebrow">03 · Власть</p>
+          <h2>Союз племён и власть ябгу</h2>
+          <p class="lead">Огузский каганат объединял разные племена; в исторических источниках это государство также известно как государство огузских ябгу.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="card-number">Правитель</span><h3>Ябгу</h3><p>Именно такой титул носил правитель огузов, а не каган.</p></article>
+          <article class="card"><span class="card-number">Опора власти</span><h3>Военная знать</h3><p>Командиры и влиятельные роды участвовали в управлении и походах.</p></article>
+          <article class="card"><span class="card-number">Основа общества</span><h3>Племена</h3><p>Союз сохранял внутреннее устройство и традиции отдельных групп.</p></article>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 5">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Хозяйство</p>
+          <h2>Степь кормила и связывала</h2>
+        </div>
+        <div class="two-col">
+          <div class="detail-list">
+            <article class="detail"><h3>Кочевое скотоводство</h3><p>Стада и сезонные перекочёвки были основой повседневной жизни.</p></article>
+            <article class="detail"><h3>Торговля</h3><p>Контакты с городами Сырдарьи давали доступ к ремесленным товарам и рынкам.</p></article>
+            <article class="detail"><h3>Города</h3><p>Поселения региона становились узлами обмена между степью и оседлыми землями.</p></article>
+          </div>
+          <aside class="stat-panel"><strong>Степь<br>↔ город</strong><span>Экономика огузов соединяла кочевое хозяйство и торговлю.</span></aside>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 6">
+        <div class="section-heading">
+          <p class="eyebrow">05 · Культура</p>
+          <h2>Устная традиция и тюркский мир</h2>
+          <p class="lead">Огузская культура развивалась в диалоге кочевых обычаев, соседних народов и религиозных перемен.</p>
+        </div>
+        <div class="two-col">
+          <div class="detail-list">
+            <article class="detail"><h3>Эпосы</h3><p>Предания и сказания передавали память о предках и героях.</p></article>
+            <article class="detail"><h3>Огузская керамика</h3><p>Археологические находки рассказывают о ремесле и быте жителей Янгикента.</p></article>
+            <article class="detail"><h3>Тюркский мир</h3><p>Огузские говоры стали важной ветвью тюркской языковой семьи.</p></article>
+          </div>
+          <figure class="photo-figure">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Dzhankent_pottery_types.jpg" alt="Керамические находки из Янгикента: огузские образцы расположены в среднем ряду" loading="eager">
+            <figcaption>
+              <span>Керамика из слоёв IX–X веков; огузские образцы — средний ряд.</span>
+              <span>Фото: International Dzhankent Expeditions · CC BY 4.0</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide quote-slide" aria-label="Слайд 7">
+        <p class="eyebrow">06 · Поворот эпохи</p>
+        <blockquote>История огузов — это не только история одного государства, но и история большого переселения народов.</blockquote>
+        <p class="source">Племенные союзы огузов стали частью масштабных перемен в Евразии.</p>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 8">
+        <div class="section-heading">
+          <p class="eyebrow">07 · Перелом</p>
+          <h2>От союза к новым державам</h2>
+          <p class="lead">Внутренние противоречия и внешнее давление постепенно изменили политическую карту степи.</p>
+        </div>
+        <div class="timeline">
+          <article class="milestone"><strong>IX век</strong><p>Укрепление огузского объединения в районе Приаралья и Сырдарьи.</p></article>
+          <article class="milestone"><strong>X век</strong><p>Расцвет союза и активные контакты с соседними государствами.</p></article>
+          <article class="milestone"><strong>XI век</strong><p>Усиление кипчакского натиска и внутренние усобицы.</p></article>
+          <article class="milestone"><strong>Исход</strong><p>Часть огузов уходит на юг и запад, к новым землям и союзам.</p></article>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide" aria-label="Слайд 9">
+        <div class="section-heading">
+          <p class="eyebrow">08 · Распад</p>
+          <h2>Почему государство исчезло</h2>
+          <p class="lead">К середине XI века государство ябгу перестало существовать, но история огузов на этом не закончилась.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="card-number">Внутри</span><h3>Усобицы</h3><p>Соперничество племён ослабляло единство и власть правителя.</p></article>
+          <article class="card"><span class="card-number">Снаружи</span><h3>Натиск кипчаков</h3><p>Военное давление ускорило уход части огузов на юг и запад.</p></article>
+          <article class="card"><span class="card-number">Наследие</span><h3>Новые державы</h3><p>Огузы вошли в состав Сельджукской державы и других государств.</p></article>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="slide thanks" aria-label="Слайд 10">
+        <p class="eyebrow">09 · Наследие и итоги</p>
+        <h2>Наследие огузов<br>живёт в истории</h2>
+        <div class="two-col">
+          <p class="lead">Огузы стали основой формирования турок, азербайджанцев, туркмен и гагаузов. Огузские языки — одна из основных ветвей тюркских языков.</p>
+          <div class="detail-list">
+            <article class="detail"><h3>Преемственность</h3><p>Сельджуки, а позднее Османы продолжили огузскую государственную традицию.</p></article>
+            <article class="detail"><h3>Спасибо за внимание!</h3><p>История огузов продолжает жить в культуре и языках тюркских народов.</p></article>
+          </div>
+        </div>
+        <p class="photo-credit">Фото цитадели Янгикента: International Dzhankent Expeditions · CC BY 4.0</p>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </section>
+    </div>
+
+    <footer class="bottombar">
+      <span class="hint">Листайте стрелками клавиатуры или кнопками</span>
+      <div class="controls" aria-label="Управление презентацией">
+        <button class="nav-button" id="previous" type="button" aria-label="Предыдущий слайд" title="Предыдущий слайд">←</button>
+        <span class="slide-counter" id="counter" aria-live="polite">01 / 10</span>
+        <button class="nav-button" id="next" type="button" aria-label="Следующий слайд" title="Следующий слайд">→</button>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const previousButton = document.getElementById('previous');
+    const nextButton = document.getElementById('next');
+    const languageButtons = document.querySelectorAll('.language-button');
+    const translationsKy = new Map(Object.entries({
+      'История степных империй': 'Талаа империяларынын тарыхы',
+      'Центральная Азия · IX–XI века': 'Борбордук Азия · IX–XI кылымдар',
+      'История тюркских народов': 'Түрк элдеринин тарыхы',
+      'Кочевые союзы, торговые пути и наследие народа, изменившего историю Евразии.': 'Көчмөндөр союзу, соода жолдору жана Евразиянын тарыхын өзгөрткөн элдин мурасы.',
+      'IX–XI века': 'IX–XI кылымдар',
+      'Приаралье и Сырдарья': 'Арал бою жана Сырдарыя',
+      '01 · Земля и время': '01 · Жер жана доор',
+      'На перекрёстке степных дорог': 'Талаа жолдорунун кесилишинде',
+      'Огузский союз сформировался на пространстве, где встречались кочевая степь, реки и караванные маршруты.': 'Огуздар союзу көчмөн талаа, дарыялар жана кербен жолдору кесилишкен аймакта түзүлгөн.',
+      'Приаралье': 'Арал бою',
+      'Степные пространства к северу и востоку от Аральского моря.': 'Арал деңизинин түндүгүндөгү жана чыгышындагы талаалар.',
+      'Сырдарья': 'Сырдарыя',
+      'Река связывала кочевые земли с городами и рынками региона.': 'Дарыя көчмөн жерлерди аймактагы шаарлар жана базарлар менен байланыштырган.',
+      'Янгикент': 'Янгикент',
+      'Один из главных политических центров огузов и резиденция ябгу.': 'Огуздардын негизги саясий борборлорунун бири жана ябгунун ордосу.',
+      '02 · Возникновение': '02 · Түзүлүшү',
+      'Как сложился огузский союз': 'Огуздар союзу кантип түзүлгөн',
+      'Огузы были объединением тюркоязычных племён. Их политический союз складывался постепенно, по мере переселений и соперничества за пастбища и торговые пути.': 'Огуздар түрк тилдүү уруулар бирикмеси болгон. Көчүүлөрдүн жана жайыттар менен соода жолдору үчүн атаандашуунун жүрүшүндө алардын саясий союзу акырындап түзүлгөн.',
+      'Перемещения': 'Көчүүлөр',
+      'Тюркские племена двигались на запад и взаимодействовали с населением степей.': 'Түрк уруулары батышты көздөй жылып, талаа калкы менен байланышта болгон.',
+      'Объединение': 'Биригүү',
+      'Общие интересы и военные союзы укрепляли власть огузских правителей.': 'Жалпы кызыкчылыктар жана аскердик союздар огуз башкаруучуларынын бийлигин бекемдеген.',
+      'Соседи': 'Коңшулар',
+      'Хазары, печенеги, кипчаки и государства Средней Азии влияли на политику региона.': 'Хазарлар, печенегдер, кыпчактар жана Орто Азия мамлекеттери аймактын саясатына таасир эткен.',
+      '03 · Власть': '03 · Бийлик',
+      'Союз племён и власть ябгу': 'Уруулар союзу жана ябгунун бийлиги',
+      'Огузский каганат объединял разные племена; в исторических источниках это государство также известно как государство огузских ябгу.': 'Огуз каганаты ар түрдүү урууларды бириктирген. Тарыхый булактарда бул мамлекет Огуз ябгуларынын мамлекети деп да аталат.',
+      'Правитель': 'Башкаруучу',
+      'Ябгу': 'Ябгу',
+      'Именно такой титул носил правитель огузов, а не каган.': 'Огуздардын башкаруучусу каган эмес, дал ушул ябгу титулун алып жүргөн.',
+      'Опора власти': 'Бийликтин таянычы',
+      'Военная знать': 'Аскер башчылары',
+      'Командиры и влиятельные роды участвовали в управлении и походах.': 'Кол башчылар жана таасирдүү уруулар башкарууга жана жортуулдарга катышкан.',
+      'Основа общества': 'Коомдун негизи',
+      'Племена': 'Уруулар',
+      'Союз сохранял внутреннее устройство и традиции отдельных групп.': 'Союз айрым топтордун ички түзүлүшүн жана салттарын сактаган.',
+      '04 · Хозяйство': '04 · Чарбачылык',
+      'Степь кормила и связывала': 'Талаа элди баккан жана байланыштырган',
+      'Кочевое скотоводство': 'Көчмөн мал чарбачылыгы',
+      'Стада и сезонные перекочёвки были основой повседневной жизни.': 'Мал чарбачылыгы жана мезгилдүү көчүүлөр күнүмдүк жашоонун негизи болгон.',
+      'Торговля': 'Соода',
+      'Контакты с городами Сырдарьи давали доступ к ремесленным товарам и рынкам.': 'Сырдарыя боюндагы шаарлар менен байланыш кол өнөрчүлүк буюмдарына жана базарларга жол ачкан.',
+      'Города': 'Шаарлар',
+      'Поселения региона становились узлами обмена между степью и оседлыми землями.': 'Аймактагы конуштар талаа менен отурукташкан жерлердин ортосундагы соода түйүндөрүнө айланган.',
+      'Степь↔ город': 'Талаа↔ шаар',
+      'Экономика огузов соединяла кочевое хозяйство и торговлю.': 'Огуздардын чарбасы көчмөн мал чарбачылыгын жана сооданы бириктирген.',
+      '05 · Культура': '05 · Маданият',
+      'Устная традиция и тюркский мир': 'Оозеки мурас жана түрк дүйнөсү',
+      'Огузская культура развивалась в диалоге кочевых обычаев, соседних народов и религиозных перемен.': 'Огуз маданияты көчмөн салттардын, коңшу элдердин жана диний өзгөрүүлөрдүн өз ара таасиринде өнүккөн.',
+      'Эпосы': 'Эпостор',
+      'Предания и сказания передавали память о предках и героях.': 'Уламыштар жана дастандар ата-бабалар менен баатырлар тууралуу эстеликти муундан муунга жеткирген.',
+      'Огузская керамика': 'Огуз керамикасы',
+      'Археологические находки рассказывают о ремесле и быте жителей Янгикента.': 'Археологиялык табылгалар Янгикент тургундарынын кол өнөрчүлүгү жана турмушу жөнүндө баяндайт.',
+      'Тюркский мир': 'Түрк дүйнөсү',
+      'Огузские говоры стали важной ветвью тюркской языковой семьи.': 'Огуз тилдери түрк тилдер үй-бүлөсүнүн маанилүү бутагына айланган.',
+      'Керамика из слоёв IX–X веков; огузские образцы — средний ряд.': 'IX–X кылымдарга таандык керамика; огуз үлгүлөрү — ортоңку катарда.',
+      'Фото: International Dzhankent Expeditions · CC BY 4.0': 'Сүрөт: International Dzhankent Expeditions · CC BY 4.0',
+      '06 · Поворот эпохи': '06 · Доор бурулушу',
+      'История огузов — это не только история одного государства, но и история большого переселения народов.': 'Огуздардын тарыхы — бир мамлекеттин гана тарыхы эмес, элдердин улуу көчүнүн да тарыхы.',
+      'Племенные союзы огузов стали частью масштабных перемен в Евразии.': 'Огуз урууларынын бирикмелери Евразиядагы чоң өзгөрүүлөрдүн бир бөлүгү болгон.',
+      '07 · Перелом': '07 · Бурулуш',
+      'От союза к новым державам': 'Союздан жаңы мамлекеттерге',
+      'Внутренние противоречия и внешнее давление постепенно изменили политическую карту степи.': 'Ички карама-каршылыктар жана тышкы басым талаанын саясий картасын акырындап өзгөрткөн.',
+      'IX век': 'IX кылым',
+      'Укрепление огузского объединения в районе Приаралья и Сырдарьи.': 'Арал бою жана Сырдарыя аймагында огуз бирикмесинин бекемделиши.',
+      'X век': 'X кылым',
+      'Расцвет союза и активные контакты с соседними государствами.': 'Союздун гүлдөп-өсүшү жана коңшу мамлекеттер менен активдүү байланыштар.',
+      'XI век': 'XI кылым',
+      'Усиление кипчакского натиска и внутренние усобицы.': 'Кыпчактардын басымы күчөп, ички жаңжалдар көбөйгөн.',
+      'Исход': 'Көчүү',
+      'Часть огузов уходит на юг и запад, к новым землям и союзам.': 'Огуздардын бир бөлүгү жаңы жерлерге жана союздарга карай түштүккө жана батышка көчкөн.',
+      '08 · Распад': '08 · Ыдыроо',
+      'Почему государство исчезло': 'Мамлекет эмне үчүн жоюлган',
+      'К середине XI века государство ябгу перестало существовать, но история огузов на этом не закончилась.': 'XI кылымдын ортосуна карай ябгулардын мамлекети жашоосун токтоткон, бирок огуздардын тарыхы муну менен аяктаган эмес.',
+      'Внутри': 'Ички себеп',
+      'Усобицы': 'Ички жаңжалдар',
+      'Соперничество племён ослабляло единство и власть правителя.': 'Уруулардын атаандашуусу биримдикти жана башкаруучунун бийлигин алсыраткан.',
+      'Снаружи': 'Тышкы себеп',
+      'Натиск кипчаков': 'Кыпчактардын басымы',
+      'Военное давление ускорило уход части огузов на юг и запад.': 'Аскердик басым огуздардын бир бөлүгүнүн түштүккө жана батышка көчүшүн тездеткен.',
+      'Наследие': 'Мурас',
+      'Новые державы': 'Жаңы мамлекеттер',
+      'Огузы вошли в состав Сельджукской державы и других государств.': 'Огуздар Селжук мамлекетинин жана башка мамлекеттердин курамына кирген.',
+      '09 · Наследие и итоги': '09 · Мурас жана жыйынтык',
+      'Наследие огузовживёт в истории': 'Огуздардын мурасы тарыхта жашайт',
+      'Огузы стали основой формирования турок, азербайджанцев, туркмен и гагаузов. Огузские языки — одна из основных ветвей тюркских языков.': 'Огуздар түрк, азербайжан, түркмөн жана гагауз элдеринин калыптанышына негиз болгон. Огуз тилдери түрк тилдеринин негизги бутактарынын бири.',
+      'Преемственность': 'Улануучулук',
+      'Сельджуки, а позднее Османы продолжили огузскую государственную традицию.': 'Селжуктар, кийинчерээк Осмондор огуздардын мамлекеттик салтын улантышкан.',
+      'Спасибо за внимание!': 'Көңүл бурганыңыздар үчүн рахмат!',
+      'История огузов продолжает жить в культуре и языках тюркских народов.': 'Огуздардын тарыхы түрк элдеринин маданиятында жана тилдеринде жашап келет.',
+      'Фото цитадели Янгикента: International Dzhankent Expeditions · CC BY 4.0': 'Янгикент цитаделинин сүрөтү: International Dzhankent Expeditions · CC BY 4.0',
+      'Листайте стрелками клавиатуры или кнопками': 'Баскычтоптун жебелери же баскычтар менен өтүңүз'
+    }));
+
+    const translatedMarkup = new Map([
+      ['.cover h1', 'Огуз<br>кагандыгы'],
+      ['.stat-panel strong', 'Талаа<br>↔ шаар'],
+      ['.thanks h2', 'Огуздардын мурасы<br>тарыхта жашайт']
+    ]);
+    let current = 0;
+    let currentLanguage = 'ru';
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.title = language === 'ky'
+        ? 'Огуз каганаты — тарыхы жана мурасы'
+        : 'Огузский каганат — история и наследие';
+      document.querySelector('main').setAttribute('aria-label',
+        language === 'ky' ? 'Огуз каганаты жөнүндө презентация' : 'Презентация об Огузском каганате');
+      document.querySelectorAll('.slide').forEach((slide, index) => {
+        slide.setAttribute('aria-label', language === 'ky' ? `Слайд ${index + 1}` : `Слайд ${index + 1}`);
+      });
+
+      document.querySelectorAll('h1, h2, h3, p, blockquote, .top-note, .hint, .brand-name, .cover-meta span, .card-number, .milestone strong, .stat-panel strong, .stat-panel span, .photo-figure figcaption span').forEach(element => {
+        if (!element.dataset.ruText) element.dataset.ruText = element.textContent.replace(/\s+/g, ' ').trim();
+        const key = element.dataset.ruText;
+        if (language === 'ky' && translatedMarkup.has(element.matches('.cover h1') ? '.cover h1' : element.matches('.stat-panel strong') ? '.stat-panel strong' : element.matches('.thanks h2') ? '.thanks h2' : '')) {
+          const selector = element.matches('.cover h1') ? '.cover h1' : element.matches('.stat-panel strong') ? '.stat-panel strong' : '.thanks h2';
+          element.innerHTML = translatedMarkup.get(selector);
+        } else if (language === 'ru' && (element.matches('.cover h1, .thanks h2, .stat-panel strong'))) {
+          element.innerHTML = element.dataset.ruHtml || (element.dataset.ruHtml = element.innerHTML);
+        } else if (language === 'ky' && translationsKy.has(key)) {
+          element.textContent = translationsKy.get(key);
+        } else if (language === 'ru') {
+          element.textContent = key;
+        }
+      });
+
+      const imageAlt = [
+        ['Руины цитадели Янгикента и раскопанная башня', 'Янгикенттин цитаделинин урандылары жана казылып алынган мунара'],
+        ['Керамические находки из Янгикента: огузские образцы расположены в среднем ряду', 'Янгикенттен табылган керамика: огуз үлгүлөрү ортоңку катарда']
+      ];
+      document.querySelectorAll('.photo-figure img').forEach((image, index) => {
+        image.alt = language === 'ky' ? imageAlt[index][1] : imageAlt[index][0];
+      });
+
+      previousButton.setAttribute('aria-label', language === 'ky' ? 'Мурунку слайд' : 'Предыдущий слайд');
+      previousButton.title = previousButton.getAttribute('aria-label');
+      nextButton.setAttribute('aria-label', language === 'ky' ? 'Кийинки слайд' : 'Следующий слайд');
+      nextButton.title = nextButton.getAttribute('aria-label');
+      document.querySelector('.controls').setAttribute('aria-label', language === 'ky' ? 'Презентацияны башкаруу' : 'Управление презентацией');
+      document.querySelector('.language-switch').setAttribute('aria-label', language === 'ky' ? 'Презентациянын тили' : 'Язык презентации');
+      languageButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+    }
+
+    function showSlide(index) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, position) => {
+        slide.classList.toggle('active', position === current);
+        const progress = slide.querySelector('.progress span');
+        if (progress) progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      });
+      counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+      previousButton.disabled = current === 0;
+      nextButton.disabled = current === slides.length - 1;
+    }
+
+    previousButton.addEventListener('click', () => showSlide(current - 1));
+    nextButton.addEventListener('click', () => showSlide(current + 1));
+    languageButtons.forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.language));
+    });
+    document.addEventListener('keydown', event => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (['ArrowRight', 'PageDown', ' '].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current + 1);
+      } else if (['ArrowLeft', 'PageUp'].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current - 1);
+      } else if (event.key === 'Home') {
+        showSlide(0);
+      } else if (event.key === 'End') {
+        showSlide(slides.length - 1);
+      }
+    });
+
+    showSlide(0);
+    setLanguage(currentLanguage);
+  </script>
+</body>
+</html>
